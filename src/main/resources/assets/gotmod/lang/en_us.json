@@ -1,13 +1,6 @@
 {
-  "itemGroup.gotmod": "Example Mod Tab",
-  "block.gotmod.example_block": "Example Block",
-  "item.gotmod.example_item": "Example Item",
-
-  "gotmod.configuration.title": "GOT Mod Configs",
-  "gotmod.configuration.section.gotmod.common.toml": "GOT Mod Configs",
-  "gotmod.configuration.section.gotmod.common.toml.title": "GOT Mod Configs",
-  "gotmod.configuration.items": "Item List",
-  "gotmod.configuration.logDirtBlock": "Log Dirt Block",
-  "gotmod.configuration.magicNumberIntroduction": "Magic Number Text",
-  "gotmod.configuration.magicNumber": "Magic Number"
+  "item.gotmod.dragonglass": "Dragonglass",
+  "item.gotmod.dragonglass_shard": "Dragonglass Shard",
+  "item.gotmod.steel_ingot": "Steel Ingot",
+  "item.gotmod.valyrian_steel_ingot": "Valyrian Steel Ingot"
 }

@@ -1,5 +1,6 @@
 package net.agarwal.gotmod;
 
+import net.agarwal.gotmod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -25,6 +26,9 @@ public class GOTMod {
 
     public GOTMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+
+        ModItems.register(modEventBus);
+
         NeoForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -35,7 +39,14 @@ public class GOTMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey()==CreativeModeTabs.INGREDIENTS){
 
+            event.accept(ModItems.DRAGONGLASS);
+            event.accept(ModItems.DRAGONGLASS_SHARD);
+
+            event.accept(ModItems.STEEL_INGOT);
+            event.accept(ModItems.VALYRIAN_STEEL_INGOT);
+        }
     }
 
     @SubscribeEvent
